@@ -8,6 +8,7 @@ import androidx.appcompat.app.AlertDialog
 import com.zhangrenwen.kotlinui.base.BaseActivity
 import com.zhangrenwen.kotlinui.ui.ListActivity
 import com.zhangrenwen.kotlinui.ui.ListMustActivity
+import com.zhangrenwen.kotlinui.ui.RecyclerViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -41,5 +42,9 @@ class MainActivity : BaseActivity() {
 
     fun listMustClick(view: View) {
         startActivity(Intent(this, ListMustActivity::class.java))
+    }
+
+    fun recyclerViewClick(view: View) {
+        startActivity(Intent(this, RecyclerViewActivity::class.java))
     }
 }
