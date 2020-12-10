@@ -28,7 +28,18 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="customClick"
         android:text="自定义头（见本页的头）" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="listClick"
+        android:text="listView一般使用" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="listMustClick"
+        android:text="listView定制页面" />
 
 </LinearLayout>

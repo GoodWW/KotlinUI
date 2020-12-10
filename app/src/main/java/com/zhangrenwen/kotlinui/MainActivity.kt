@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.zhangrenwen.kotlinui.base.BaseActivity
+import com.zhangrenwen.kotlinui.ui.ListActivity
+import com.zhangrenwen.kotlinui.ui.ListMustActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -33,7 +35,11 @@ class MainActivity : BaseActivity() {
         }.show()
     }
 
-    fun customClick(view: View) {
+    fun listClick(view: View) {
+        startActivity(Intent(this, ListActivity::class.java))
+    }
 
+    fun listMustClick(view: View) {
+        startActivity(Intent(this, ListMustActivity::class.java))
     }
 }
