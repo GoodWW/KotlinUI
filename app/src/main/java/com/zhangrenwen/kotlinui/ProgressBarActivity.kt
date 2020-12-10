@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.zhangrenwen.kotlinui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_progress_bar.*
 
 class ProgressBarActivity : BaseActivity() {

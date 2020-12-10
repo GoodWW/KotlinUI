@@ -7,15 +7,28 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+    <com.zhangrenwen.kotlinui.custom_view.TitleLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="progressBarClick"
         android:text="ProgressBar进度条" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="alertDialogClick"
         android:text="AlertDialog对话框" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="customClick"
+        android:text="自定义头（见本页的头）" />
 
 </LinearLayout>

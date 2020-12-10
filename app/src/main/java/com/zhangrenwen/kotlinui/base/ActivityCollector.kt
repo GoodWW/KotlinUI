@@ -1,4 +1,4 @@
-package com.zhangrenwen.kotlinui
+package com.zhangrenwen.kotlinui.base
 
 import android.app.Activity
 
