@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.RecyclerViewActivity"></activity>
+        <activity android:name=".ui.ChatActivity"></activity>
+        <activity android:name=".ui.UIActivity" />
+        <activity android:name=".ui.RecyclerViewActivity" />
         <activity android:name=".ui.ListMustActivity" />
         <activity android:name=".ui.ListActivity" />
         <activity android:name=".ProgressBarActivity" />

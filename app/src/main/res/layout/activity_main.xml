@@ -17,35 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="progressBarClick"
-        android:text="ProgressBar进度条" />
+        android:text="UI实例" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="alertDialogClick"
-        android:text="AlertDialog对话框" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义头（见本页的头）" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="listClick"
-        android:text="listView一般使用" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="listMustClick"
-        android:text="listView定制页面" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="recyclerViewClick"
-        android:text="recyclerView基本使用" />
 
 </LinearLayout>
