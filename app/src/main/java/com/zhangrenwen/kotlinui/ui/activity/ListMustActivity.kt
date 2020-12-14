@@ -1,6 +1,5 @@
-package com.zhangrenwen.kotlinui.ui
+package com.zhangrenwen.kotlinui.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.zhangrenwen.kotlinui.R

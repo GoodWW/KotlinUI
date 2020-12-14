@@ -14,6 +14,7 @@ open class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         Log.d("BaseActivity", "当前运行的activity是  " + javaClass.simpleName)
         ActivityCollector.addActivity(this)
     }

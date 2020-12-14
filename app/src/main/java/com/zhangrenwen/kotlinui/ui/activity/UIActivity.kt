@@ -1,4 +1,4 @@
-package com.zhangrenwen.kotlinui.ui
+package com.zhangrenwen.kotlinui.ui.activity
 
 import android.content.Intent
 import android.os.Bundle

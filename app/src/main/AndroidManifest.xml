@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.ChatActivity"></activity>
-        <activity android:name=".ui.UIActivity" />
-        <activity android:name=".ui.RecyclerViewActivity" />
-        <activity android:name=".ui.ListMustActivity" />
-        <activity android:name=".ui.ListActivity" />
+        <activity android:name=".ui.activity.FragmentActivity"></activity>
+        <activity android:name=".ui.activity.ChatActivity" />
+        <activity android:name=".ui.activity.UIActivity" />
+        <activity android:name=".ui.activity.RecyclerViewActivity" />
+        <activity android:name=".ui.activity.ListMustActivity" />
+        <activity android:name=".ui.activity.ListActivity" />
         <activity android:name=".ProgressBarActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -22,6 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activity.NewsContentActivity" />
     </application>
 
 </manifest>

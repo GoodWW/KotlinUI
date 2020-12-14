@@ -16,8 +16,14 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="progressBarClick"
+        android:onClick="uiClick"
         android:text="UI实例" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="fragmentClick"
+        android:text="Fragment" />
 
 
 </LinearLayout>

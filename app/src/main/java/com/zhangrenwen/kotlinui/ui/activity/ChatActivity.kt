@@ -1,15 +1,15 @@
-package com.zhangrenwen.kotlinui.ui
+package com.zhangrenwen.kotlinui.ui.activity
 
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.zhangrenwen.kotlinui.R
 import com.zhangrenwen.kotlinui.adapter.MsgAdapter
+import com.zhangrenwen.kotlinui.base.BaseActivity
 import com.zhangrenwen.kotlinui.bean.Msg
 import kotlinx.android.synthetic.main.activity_chat.*
 
-class ChatActivity : AppCompatActivity(), View.OnClickListener {
+class ChatActivity : BaseActivity(), View.OnClickListener {
 
     private val msgList = ArrayList<Msg>()
 

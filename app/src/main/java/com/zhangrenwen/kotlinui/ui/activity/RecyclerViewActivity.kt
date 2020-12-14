@@ -1,6 +1,5 @@
-package com.zhangrenwen.kotlinui.ui
+package com.zhangrenwen.kotlinui.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
@@ -8,12 +7,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.zhangrenwen.kotlinui.R
 import com.zhangrenwen.kotlinui.adapter.FruitRecAdapter
+import com.zhangrenwen.kotlinui.base.BaseActivity
 import com.zhangrenwen.kotlinui.bean.Fruit
 import kotlinx.android.synthetic.main.activity_recycler_view.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-class RecyclerViewActivity : AppCompatActivity() {
+class RecyclerViewActivity : BaseActivity() {
 
     private val fruitList = ArrayList<Fruit>()
 

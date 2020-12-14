@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newsTitleLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/newsTitleFrag"
+        android:name="com.zhangrenwen.kotlinui.ui.fragment.NewsTitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.zhangrenwen.kotlinui.custom_view.TitleLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</FrameLayout>

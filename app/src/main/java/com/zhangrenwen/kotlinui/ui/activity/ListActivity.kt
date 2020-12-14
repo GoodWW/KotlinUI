@@ -1,4 +1,4 @@
-package com.zhangrenwen.kotlinui.ui
+package com.zhangrenwen.kotlinui.ui.activity
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
