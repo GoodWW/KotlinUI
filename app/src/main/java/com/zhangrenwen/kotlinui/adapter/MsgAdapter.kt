@@ -25,16 +25,19 @@ class MsgAdapter(val msgList: List<Msg>) : RecyclerView.Adapter<MsgViewHolder>()
 //    }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MsgViewHolder =
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MsgViewHolder {
         if (viewType == Msg.TYPE_RECEIVED) {
             val view =
                 LayoutInflater.from(parent.context).inflate(R.layout.msg_left_item, parent, false)
-            LeftViewHolder(view)
+            val viewHolder: LeftViewHolder = LeftViewHolder(view)
+            return viewHolder
         } else {
             val view =
                 LayoutInflater.from(parent.context).inflate(R.layout.msg_right_item, parent, false)
-            RightViewHolder(view)
+            val viewHolder: RightViewHolder = RightViewHolder(view)
+            return viewHolder
         }
+    }
 
 
     override fun onBindViewHolder(holder: MsgViewHolder, position: Int) {
