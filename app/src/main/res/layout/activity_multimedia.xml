@@ -4,31 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-
-    <com.zhangrenwen.kotlinui.custom_view.TitleLayout
-        android:id="@+id/llTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    android:orientation="vertical">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="uiClick"
-        android:text="UI实例" />
+        android:onClick="notification"
+        android:text="通知" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="fragmentClick"
-        android:text="Fragment" />
+        android:onClick="camera"
+        android:text="摄像头和相册" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="multimedia"
-        android:text="9，多媒体" />
-
+        android:onClick="multimediaPlay"
+        android:text="播放多媒体" />
 
 </LinearLayout>
