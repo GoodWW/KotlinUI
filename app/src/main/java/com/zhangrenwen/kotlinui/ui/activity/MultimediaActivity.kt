@@ -31,8 +31,13 @@ class MultimediaActivity : BaseActivity() {
             val channel = NotificationChannel(
                 "com.zhangrenwen.kotlinui.ui.activity.MultimediaActivity",
                 "测试渠道", NotificationManager.IMPORTANCE_DEFAULT
-            )
-            manager.createNotificationChannel(channel)
+            )//通知渠道重要等级默认
+
+            val channel2 = NotificationChannel(
+                "com.zhangrenwen.kotlinui.ui.activity.MultimediaActivity1",
+                "测试渠道等级高", NotificationManager.IMPORTANCE_HIGH
+            )//通知渠道重要等级高
+            manager.createNotificationChannel(channel2)
         }
     }
 
@@ -44,14 +49,31 @@ class MultimediaActivity : BaseActivity() {
 
 
         if (!::notificationBtn.isInitialized)
+//            notificationBtn = NotificationCompat.Builder(
+//                this,
+//                "com.zhangrenwen.kotlinui.ui.activity.MultimediaActivity"
+//            ) //通知渠道重要等级默认
+
             notificationBtn = NotificationCompat.Builder(
                 this,
-                "com.zhangrenwen.kotlinui.ui.activity.MultimediaActivity"
-            )
+                "com.zhangrenwen.kotlinui.ui.activity.MultimediaActivity1"
+            )//通知渠道重要等级高
                 .setContentTitle("内容标题")//长了会默认省略
-                .setContentText("内容文字")
+//                .setContentText("内容文字")//长了会默认省略
+
+//                .setStyle(NotificationCompat.BigTextStyle().bigText("内容文字" +
+//                        "内容文字内容文字内容文字内容文字内容文字内容文字内容文字" +
+//                        "内容文字内容文字内容文字内容文字内容文字内容文字内容文字" +
+//                        "内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字"))//封装长文字信息
+
+                .setStyle(
+                    NotificationCompat.BigPictureStyle().bigPicture(
+                        BitmapFactory.decodeResource(resources, R.drawable.butful_girl)
+                    )
+                )//显示一张大图片
+
                 .setSmallIcon(R.drawable.apple_pic)
-                .setLargeIcon(BitmapFactory.decodeResource(resources, R.drawable.cherry_pic))
+                .setLargeIcon(BitmapFactory.decodeResource(resources, R.drawable.butful_girl_v))
                 .setContentIntent(pi)
                 .setAutoCancel(true)//点击就消失
                 .build()
