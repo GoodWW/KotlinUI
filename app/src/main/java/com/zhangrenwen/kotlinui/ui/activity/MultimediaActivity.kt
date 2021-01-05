@@ -83,6 +83,8 @@ class MultimediaActivity : BaseActivity() {
         //        manager.cancel(1)  另外一种取消的方法  在点击事件结束后取消
     }
 
-    fun camera(view: View) {}
+    fun camera(view: View) {
+        startActivity(Intent(this, CameraActivity::class.java))
+    }
     fun multimediaPlay(view: View) {}
 }
