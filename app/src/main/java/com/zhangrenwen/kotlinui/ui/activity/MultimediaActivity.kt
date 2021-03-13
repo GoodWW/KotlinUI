@@ -14,6 +14,9 @@ import androidx.core.app.NotificationCompat
 import com.zhangrenwen.kotlinui.R
 import com.zhangrenwen.kotlinui.base.BaseActivity
 
+/**
+ * 最外层的UI
+ */
 class MultimediaActivity : BaseActivity() {
 
     private lateinit var manager: NotificationManager
@@ -83,8 +86,10 @@ class MultimediaActivity : BaseActivity() {
         //        manager.cancel(1)  另外一种取消的方法  在点击事件结束后取消
     }
 
+    //9，多媒体
     fun camera(view: View) {
         startActivity(Intent(this, CameraActivity::class.java))
     }
+
     fun multimediaPlay(view: View) {}
 }
