@@ -6,7 +6,6 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
 import android.media.ExifInterface
-import android.media.Image
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -24,7 +23,11 @@ import java.io.File
 class CameraActivity : BaseActivity() {
 
 
+    //拍照的请求code
     val takePhoto = 1
+
+    //打开相册的请求code
+    val fromAlbum = 2
 
     //存放摄像头拍下的照片
     lateinit var outputImage: File
@@ -80,8 +83,23 @@ class CameraActivity : BaseActivity() {
                     imageView.setImageBitmap(rotateIfRequired(bitmap))
                 }
             }
+            fromAlbum -> {
+                if (resultCode == Activity.RESULT_OK &&
+                    data != null
+                ) {
+                    data.data?.let { uri ->
+                        val bitmap = getBitmapFromUri(uri)
+                        imageView.setImageBitmap(bitmap)
+                    }
+                }
+            }
         }
     }
+
+    private fun getBitmapFromUri(uri: Uri) =
+        contentResolver.openFileDescriptor(uri, "r")?.use {
+            BitmapFactory.decodeFileDescriptor(it.fileDescriptor)
+        }
 
     private fun rotateIfRequired(bitmap: Bitmap): Bitmap {
         val exif = ExifInterface(outputImage.path)
@@ -110,7 +128,13 @@ class CameraActivity : BaseActivity() {
 
 
     //相册点击事件
-    fun fromAlbum(view: View) {}
+    fun fromAlbum(view: View) {
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+        intent.addCategory(Intent.CATEGORY_OPENABLE)
+        //指定值显示图片
+        intent.type = "image/*"
+        startActivityForResult(intent, fromAlbum)
+    }
 
 
 }
