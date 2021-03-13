@@ -70,7 +70,44 @@ class CameraActivity : BaseActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+            takePhoto -> {
+                if (resultCode == Activity.RESULT_OK) {
+                    //将拍摄的照片显示出来
+                    val bitmap = BitmapFactory.decodeStream(
+                        contentResolver.openInputStream(imageUrl)
+                    )
+                    imageView.setImageBitmap(rotateIfRequired(bitmap))
+                }
+            }
+        }
     }
+
+    private fun rotateIfRequired(bitmap: Bitmap): Bitmap {
+        val exif = ExifInterface(outputImage.path)
+        val orientation = exif.getAttributeInt(
+            ExifInterface.TAG_ORIENTATION,
+            ExifInterface.ORIENTATION_NORMAL
+        )
+        return when (orientation) {
+
+            ExifInterface.ORIENTATION_ROTATE_90 -> rotateBitmap(bitmap, 90)
+            ExifInterface.ORIENTATION_ROTATE_180 -> rotateBitmap(bitmap, 18)
+            else -> bitmap
+        }
+    }
+
+    private fun rotateBitmap(bitmap: Bitmap, degree: Int): Bitmap {
+        val matrix = Matrix()
+        matrix.postRotate(degree.toFloat())
+        val rotateBitmap = Bitmap.createBitmap(
+            bitmap, 0, 0,
+            bitmap.width, bitmap.height, matrix, true
+        )
+        bitmap.recycle()//将不再需要的  bitmap 回收
+        return rotateBitmap
+    }
+
 
     //相册点击事件
     fun fromAlbum(view: View) {}
