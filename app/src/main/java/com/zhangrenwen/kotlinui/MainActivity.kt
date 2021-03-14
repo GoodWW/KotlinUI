@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.zhangrenwen.kotlinui.base.BaseActivity
+import com.zhangrenwen.kotlinui.ui.activity.ActivityTestActivity
 import com.zhangrenwen.kotlinui.ui.activity.FragmentActivity
 import com.zhangrenwen.kotlinui.ui.activity.MultimediaActivity
 import com.zhangrenwen.kotlinui.ui.activity.UIActivity
@@ -26,5 +27,10 @@ class MainActivity : BaseActivity() {
 
     fun multimedia(view: View) {
         startActivity(Intent(this, MultimediaActivity::class.java))
+    }
+
+    //跳转到 Activity 实例练习
+    fun activityTest(view: View) {
+        startActivity(Intent(this, ActivityTestActivity::class.java))
     }
 }

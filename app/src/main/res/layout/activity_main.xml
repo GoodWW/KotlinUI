@@ -27,6 +27,11 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="activityTest"
+        android:text="3，Activity" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="multimedia"
         android:text="9，多媒体" />
 

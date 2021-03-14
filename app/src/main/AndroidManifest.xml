@@ -9,17 +9,19 @@
         android:roundIcon="@drawable/butful_girl_v"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.ActivityTestActivity"></activity>
 
         <provider
-            android:authorities="com.zhangrenwen.kotlinui.ui.activity.cameraActivity"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="com.zhangrenwen.kotlinui.ui.activity.cameraActivity"
             android:exported="false"
             android:grantUriPermissions="true">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".ui.activity.CameraActivity"/>
+        <activity android:name=".ui.activity.CameraActivity" />
         <activity android:name=".ui.activity.MultimediaActivity" />
         <activity android:name=".ui.activity.FragmentActivity" />
         <activity android:name=".ui.activity.ChatActivity" />
